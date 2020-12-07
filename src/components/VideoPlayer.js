@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
+import GlobalContext from "../state/GlobalContext";
 
-export default function VideoPlayer() {
+const VideoPlayer = () => {
+  const { state } = useContext(GlobalContext);
+  const { currentVideoSrc } = state;
   return (
     <div>
-      <video width="480" height="360" controls>
-          <source src =""></source>
-      </video>
+      <video
+        src={currentVideoSrc}
+        width="480"
+        height="360"
+        controls
+        autoPlay
+      ></video>
     </div>
   );
-}
+};
+
+export default VideoPlayer;

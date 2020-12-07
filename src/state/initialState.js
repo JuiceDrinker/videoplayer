@@ -1,7 +1,5 @@
 const initialState = {
-    currentVideo: {
-        src: ''
-    }
-}
+  currentVideoSrc: "hello",
+};
 
-export default initialState
+export default initialState;

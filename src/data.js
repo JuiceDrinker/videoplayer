@@ -1,4 +1,4 @@
-export const data = [
+const data = [
     {
     id: 1,
     name: "Aquaman",
@@ -28,3 +28,5 @@ export const data = [
     video: "http://mirrors.standaloneinstaller.com/video-sample/TRA3106.mp4"
     }
     ]
+
+export default data;

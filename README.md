@@ -7,7 +7,8 @@ Run `npm start`
 
 ### Components
 - VideoPlayer
-- Posters
+- PosterView
+- Poster
 
 ### User Stories
 - When the user clicks on a specific poster, the correct video should start playing
