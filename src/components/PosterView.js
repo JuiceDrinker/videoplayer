@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
-import data from "../data";
 import GlobalContext from "../state/GlobalContext";
+
+import data from "../data";
 import Poster from "./Poster";
 
 const PosterView = () => {
@@ -20,11 +21,12 @@ const PosterView = () => {
       {data.map((poster) => {
         return (
           <Poster
+            key={id} 
             name={poster.name}
             description={poster.description}
             image={poster.image}
             video={poster.video}
-            total={data.length}
+            // total={data.length} 
           />
         );
       })}

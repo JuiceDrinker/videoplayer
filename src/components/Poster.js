@@ -1,8 +1,8 @@
-import { findByLabelText } from "@testing-library/react";
-import React, { useContext, useEffect } from "react";
-import { findRenderedComponentWithType } from "react-dom/test-utils";
-import ReactTooltip from "react-tooltip";
+import React, { useContext } from "react";
 import globalContext from "../state/GlobalContext";
+
+import ReactTooltip from "react-tooltip";
+
 const Poster = (props) => {
   const { state, dispatch } = useContext(globalContext);
   const { name, description, image, video, total } = props;
@@ -10,6 +10,7 @@ const Poster = (props) => {
 
   const handleClick = () => {
     if (state.currentVideoSrc !== video) {
+      // As to not reload video, if its already selected by user
       dispatch({
         type: "posterClick",
         payload: video,
@@ -22,9 +23,6 @@ const Poster = (props) => {
     flexDirection: "column",
     justifyContent: "space-around",
     alignItems: "center",
-    "&:hover": {
-      cursor: "none",
-    },
   };
 
   const captionStyle = {

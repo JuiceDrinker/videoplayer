@@ -3,9 +3,7 @@ import GlobalContext from "../state/GlobalContext";
 
 const VideoPlayer = () => {
   const { state } = useContext(GlobalContext);
-  const { currentVideoSrc } = state;
-
-  const { videoWidth } = state;
+  const { currentVideoSrc, videoWidth } = state;
 
   const videoContainerStyle = {
     display: "block",
@@ -22,7 +20,7 @@ const VideoPlayer = () => {
         width="100%"
         height="100%"
         controls
-        autoPlay
+        autoPlay 
       ></video>
     </div>
   );
