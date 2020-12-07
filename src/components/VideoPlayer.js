@@ -4,12 +4,23 @@ import GlobalContext from "../state/GlobalContext";
 const VideoPlayer = () => {
   const { state } = useContext(GlobalContext);
   const { currentVideoSrc } = state;
+
+  const { videoWidth } = state;
+
+  const videoContainerStyle = {
+    display: "block",
+    margin: "0 auto",
+    width: videoWidth,
+    height: "60vh",
+    marginTop: "3rem",
+  };
+
   return (
-    <div>
+    <div className="videoContainer" style={videoContainerStyle}>
       <video
         src={currentVideoSrc}
-        width="480"
-        height="360"
+        width="100%"
+        height="100%"
         controls
         autoPlay
       ></video>

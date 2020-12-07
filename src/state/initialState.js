@@ -1,5 +1,6 @@
 const initialState = {
-  currentVideoSrc: "hello",
+  currentVideoSrc: "",
+  videoWidth: "50%",
 };
 
 export default initialState;
