@@ -11,7 +11,7 @@ const VideoPlayer = () => {
     display: "block",
     margin: "0 auto",
     width: videoWidth,
-    height: "60vh",
+    height: "50vh",
     marginTop: "3rem",
   };
 

@@ -4,3 +4,14 @@
   box-sizing: border-box;
 }
 
+.tooltip {
+  background-color: white !important;
+  color: black !important;
+  width: 400px !important;
+  height: auto !important;
+  opacity: 0.3 !important;
+}
+
+.poster:hover {
+  cursor: none;
+}
