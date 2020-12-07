@@ -1,24 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useReducer, useEffect } from "react";
 
+import GlobalContext from './state/GlobalContext'
+import initialState from './state/initialState'
+import VideoPlayer from "./components/VideoPlayer";
+import Posters from "./components/Posters";
+import globalReducer from "./globalReducer";
 function App() {
+  const [state, dispatch] = useReducer(globalReducer, initialState);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <GlobalContext.Provider value ={{state, dispatch}}>
+      <div className="App">
+        <VideoPlayer />
+        <Posters />
+      </div>
+    </GlobalContext.Provider>
   );
 }
 
