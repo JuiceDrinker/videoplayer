@@ -6,7 +6,7 @@ import ReactTooltip from "react-tooltip";
 const Poster = (props) => {
   const { state, dispatch } = useContext(globalContext);
   const { name, description, image, video, total } = props;
-  // const imageWidth = parseInt(state.videoWidth) / total  TODO: Dynamic image resize not working
+  //   const imageWidth = parseInt(state.videoWidth) / total; This is saying that it each image should be an eight of the screen (12.5%) instead of returning a quarter of the width of the parent div (PosterView) because we are working in percentages instead of actual px values
 
   const handleClick = () => {
     if (state.currentVideoSrc !== video) {
@@ -39,7 +39,7 @@ const Poster = (props) => {
         src={image}
         alt={description}
         onClick={handleClick}
-        // width={imageWidth + "%"} Dynamic images not working
+        // width={imageWidth + "%"}
       />
       <figcaption style={captionStyle}> {name} </figcaption>
       <ReactTooltip className="tooltip" arrowColor="white" />

@@ -16,17 +16,15 @@ const PosterView = () => {
     width: videoWidth,
     marginTop: "1rem",
   };
+
   return (
     <div style={style}>
       {data.map((poster) => {
+        const { id, name, description, image, video } = poster;
         return (
           <Poster
-            key={id} 
-            name={poster.name}
-            description={poster.description}
-            image={poster.image}
-            video={poster.video}
-            // total={data.length} 
+            {...{ id, name, description, image, video }}
+            // total={data.length}
           />
         );
       })}
