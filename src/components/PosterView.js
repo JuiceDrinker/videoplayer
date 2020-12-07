@@ -23,7 +23,8 @@ const PosterView = () => {
         const { id, name, description, image, video } = poster;
         return (
           <Poster
-            {...{ id, name, description, image, video }}
+            key={id}
+            {...{ name, description, image, video }}
             // total={data.length}
           />
         );
